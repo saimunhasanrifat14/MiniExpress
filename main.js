@@ -10,7 +10,6 @@ const app = new miniExpress();
 
 app.use((req, res, next) => {
   console.log("middleware funtion 1", req.url);
-  res.end("middleware 1");
   next();
 });
 
@@ -20,15 +19,15 @@ app.use((req, res, next) => {
 });
 
 app.get("/home", (req, res) => {
-  res.end("ami home route a ");
+  res.end("ami home route a achi");
 });
 
 app.get("/about", (req, res) => {
-  log(req);
+  res.end("ami about route a ");
 });
 
 app.get("/mern", (req, res) => {
-  res.end("hello mern");
+  res.end("ami mern route a ");
 });
 
 app.ourListen(3000, () => {
